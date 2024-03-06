@@ -1,0 +1,35 @@
+<html>
+<head>
+<style>
+body {
+background-image: url(https://images.pexels.com/photos/1162361/pexels-photo-1162361.jpeg);
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+color: lime;
+font-size: 24pt;
+text-align: center;
+}
+.red { color: red;}
+</style>
+</head>
+<body>
+<b class="red">WE HAVE BEST RTP !!!</b>
+<script>
+console.log(location);
+let host = location.host;
+let subdomain = host.split(".")[0];
+document.title = "subdomain: " + subdomain;
+const head = document.getElementsByTagName('head')[0];
+let link = document.createElement('meta');
+link.setAttribute('name', 'keywords');
+link.content = "subdomain, " + subdomain;
+head.appendChild(link);
+let h = document.createElement("H1");
+let t = document.createTextNode(subdomain);
+h.appendChild(t);
+let script = document.getElementsByTagName('script')[0];
+document.body.replaceChild(h, script);
+</script>
+</body>
+</html>
